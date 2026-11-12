@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-duplicate-finder"
+version = "1.0.0"
+description = "Return repeated CSV records after first occurrence."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "seipass"}]
+
+[project.scripts]
+csv-duplicate-finder = "csv_duplicate_finder:main"
+
+[tool.setuptools]
+py-modules = ["csv_duplicate_finder"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
